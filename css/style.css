@@ -1,0 +1,123 @@
+body{
+    margin:0;
+}
+.navbar{
+    height:8vh;
+    width:100%;
+    background: gray;
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    margin:0;
+}
+.login-items{
+    list-style: none;
+    display: flex;
+
+
+}
+.login-item{
+    margin-left: 20vh;
+
+    text-align: center;
+    color: white;
+    vertical-align: center;
+    align-self: center;
+
+}
+.login{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    padding: 70px 0;
+    color: white;
+
+}
+a:hover{
+    color: black;
+}
+.navbar-search{
+    display: flex;
+}
+.search-bar{
+    margin: 20px;
+    width: 40vh;
+}
+.title{
+    color:white;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+.sidebar{
+
+    height:50vh;
+    width:50vh;
+    background: gray;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    float: left;
+}
+.categorii{
+    list-style: none;
+    padding-left:0px;
+}
+.categorie {
+    margin:10px;
+    border-style: double;
+    border-width: 2px;
+    border-color: black;
+    padding: 0 100px;
+    text-align: center;
+}
+.cat{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+.slideshow{
+    height: auto;
+    width: 200vh;
+    background: black;
+    float:right;
+
+}
+.content{
+    display: flex;
+}
+.carte{
+    width: 20vh;
+    height: 30vh;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    align-items: center;
+}
+.img{
+    margin-top: 3vh ;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.content2{
+    background: gray;
+
+}
+.carti{
+    display: flex;
+    padding: 30px;
+}
+#titlu{
+    width:100%;
+    margin:0;
+    height: 15vh;
+    padding-top: 7vh;
+    font-size:2.5rem;
+
+}
+.container3{
+    width: 100%;
+    height: 30vh;
+    background: darkgray;
+}
