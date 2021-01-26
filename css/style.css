@@ -1,123 +1,314 @@
-body{
-    margin:0;
+*{
+	margin:0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Open-sans', sans-serif ;
 }
-.navbar{
-    height:8vh;
-    width:100%;
-    background: gray;
-    display: flex;
-    font-family: 'Oswald', sans-serif;
-    margin:0;
-}
-.login-items{
-    list-style: none;
-    display: flex;
 
 
-}
-.login-item{
-    margin-left: 20vh;
 
-    text-align: center;
-    color: white;
-    vertical-align: center;
-    align-self: center;
 
-}
-.login{
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    padding: 70px 0;
-    color: white;
 
-}
-a:hover{
-    color: black;
-}
-.navbar-search{
-    display: flex;
-}
-.search-bar{
-    margin: 20px;
-    width: 40vh;
-}
-.title{
-    color:white;
-    font-size: 2rem;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-}
-.sidebar{
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
 
-    height:50vh;
-    width:50vh;
-    background: gray;
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
-    float: left;
-}
-.categorii{
-    list-style: none;
-    padding-left:0px;
-}
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   STICKY SIDEBAR
+   ========================= */
+
+   .sticky-sidebar {
+	   margin-top: 30px;
+     background: black;
+     padding: 20px 20px 10px;
+	 border-radius: 2px;
+ 	box-shadow: 0 12px 0 -6px gray;
+ 	position: fixed;
+ 	left: 5%;
+ 	width: 36%;
+	color: white;
+	height: 85vh;
+
+
+
+   }
+
 .categorie {
-    margin:10px;
-    border-style: double;
-    border-width: 2px;
-    border-color: black;
-    padding: 0 100px;
-    text-align: center;
-}
-.cat{
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    color: white;
-}
-.slideshow{
-    height: auto;
-    width: 200vh;
-    background: black;
-    float:right;
+list-style: none;
+padding-top: 5px;
+padding-bottom: 5px;
+text-align: center;
+cursor: pointer;
 
+
+}
+.workspace{
+	height: 100vh;
+}
+
+body{
+	background: #f2f2f2;
+}
+nav{
+	background: #171c24;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	height:70px;
+	padding: 0 100px;
+}
+nav .nav-items li a{
+	color: white;
+	text-decoration: none;
+	padding: 0 0 0 60px;
+	flex: 1;
+	font-size:15px;
+	font-weight: 500;
+}
+nav .nav-items li {
+	padding: 0 15px;
+}
+nav .nav-items{
+	display: flex;
+	list-style: none;
+}
+nav .brand{
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: -1px;
+
+}
+nav form{
+	display: flex;
+	height:35px;
+	background: #1e232b;
+	min-width: 18%; !important;
+	border: 1px solid black;
+	padding: 2px;
+}
+nav form .search-books{
+	height: 100%;
+	width: 100%;
+	padding: 0 10px;
+	color: #fff;
+	font-weight: 500;
+	background: none;
+	font-size: 17px;
+	outline: 0;
+
+}
+nav form .search-box:focus{
+	outline: 0;
+}
+nav form button{
+
+	padding: 0 15px;
+	background: #ff3d00;
+	border:none;
+	cursor:pointer;
+	font-size: 17px;
+	color: white;
+	border-radius:2px;
+}
+nav .menu-icon,
+nav .search-icon,
+nav .cancel-icon{
+	width: 40px;
+	color: #fff;
+	text-align: center;
+	margin: 0 50px;
+	font-size: 18px;
+	cursor: pointer;
+	display: none;
+
+}
+nav .menu-icon span,
+nav .search-icon,
+nav .cancel-icon{
+
+	display: none;
+
+}
+@media (max-width: 1245px) {
+	nav{
+		padding: 0 50px;
+	}
+}
+@media (max-width: 1140px) {
+	nav{
+		padding: 0px;
+	}
+	nav .brand{
+		flex:2;
+		text-align: center;
+	}
+	nav .nav-items{
+		position:fixed;
+		z-index:99;
+		top:70px;
+		width:100%;
+		left: -100%;
+		height: 100%;
+		background: #14141f;
+		display: inline-block;
+		padding: 10px 50px 0 50px;
+		text-align: center;
+	}
+	nav .nav-items li{
+		line-height: 40px;
+		margin: 30px 0;
+	}
+	nav .nav-items li a{
+		font-size:20px;
+	}
+	nav .menu-icon{
+		display: block;
+	}
+	nav .search-icon,
+	nav .menu-icon span{
+		display: block;
+	}
+	nav form{
+		position: absolute;
+		top: 95px;
+		right: 50px;
+	}
+	nav form:before{
+		position: absolute;
+		content: "";
+		top: -13px;
+		right: 0;
+		width: 0;
+		height: 0;
+		z-index: -1;
+		border: 10px solid transparent;
+		border-bottom-color: #1e232b;
+		margin: -20px 0 0;
+
+	}
+	nav form:after{
+		position: absolute;
+		content: "";
+		padding: 2px;
+		height: 60px;
+		background: #1e232b;
+		width: calc(100% + 20px);
+		border-radius: 2px;
+		z-index: -2;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+	nav .menu-icon span.hide,
+	  nav .search-icon.hide{
+	    display: none;
+	  }
+	  nav .cancel-icon.show{
+	    display: block;
+	  }
+	}
+	.content{
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  text-align: center;
+	  transform: translate(-50%, -50%);
+	}
+	.content header{
+	  font-size: 30px;
+	  font-weight: 700;
+	}
+	.content .text{
+	  font-size: 30px;
+	  font-weight: 700;
+	}
+	.space{
+	  margin: 10px 0;
+	}
+	nav .brand.space{
+	  color: red;
+	  padding: 0 5px 0 0;
+	}
+
+}
+
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
 }
 .content{
-    display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.carte{
-    width: 20vh;
-    height: 30vh;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    align-items: center;
+.content header{
+  font-size: 30px;
+  font-weight: 700;
 }
-.img{
-    margin-top: 3vh ;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
 }
-.content2{
-    background: gray;
+.content .space{
+  margin: 10px 0;
+}
+.form-login{
+	padding:50px;
+	display: flex;
+	justify-content: center;
+}
+.form-group{
+	padding:40px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.form-element-input{
+	margin-top:30px;
+	width:30vh;
+	height:3.5vh;
+	padding:0.7vh;
+	border-style: solid;
+	border-radius: 30px;
+	border-color: transparent;
+	margin-left:4vh;
 
 }
-.carti{
-    display: flex;
-    padding: 30px;
+.form-element-input:focus{
+	outline-width: 0;
 }
-#titlu{
-    width:100%;
-    margin:0;
-    height: 15vh;
-    padding-top: 7vh;
-    font-size:2.5rem;
+.form-button{
 
-}
-.container3{
-    width: 100%;
-    height: 30vh;
-    background: darkgray;
+
+	height:5vh;
+	width:20vh;
+	font-family: 'Oswald', sans-serif;
+	background-color: #75b4c0;
+	font-size:1.25rem;
+	cursor: pointer;
+	margin-left: 7vh;
 }

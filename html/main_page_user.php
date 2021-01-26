@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
+<?php
+	session_start();
+	if(!isset($_SESSION['tip_user']))
+		header("Location: ../html/index.php");
+	if($_SESSION['tip_user']=="1")
+		header("Location: main_page_manager.php");
+?>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -11,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5dcf37b4b9.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 </head>
 
 
@@ -40,9 +49,10 @@
             </div>
             <div class="navbar-items">
                 <ul class="login-items">
-                   <li class="login-item"><a class="login" href="#" >Login</a></li>
-                   <li class="login-item" style="margin-right: 5vh"><a class="login" href="#">Register</a></li>
+                   <li class="login-item"><a class="login" href="#" id="profilul_meu" >Profilul meu</a></li>
+                   <li class="login-item" style="margin-right: 5vh"><a class="login" id="log_out" href="../php/log_out.inc.php">Log out</a></li>
                 </ul>
+
             </div>
         </nav>
     </div>
